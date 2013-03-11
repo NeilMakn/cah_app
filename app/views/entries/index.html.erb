@@ -1,0 +1,33 @@
+<h1>Listing entries</h1>
+
+<table>
+  <tr>
+    <th>Black card</th>
+    <th>White card</th>
+    <th>Playa</th>
+    <th>Wins</th>
+    <th>Losses</th>
+    <th>Draws</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @entries.each do |entry| %>
+  <tr>
+    <td><%= entry.black_card %></td>
+    <td><%= entry.white_card %></td>
+    <td><%= entry.Playa %></td>
+    <td><%= entry.wins %></td>
+    <td><%= entry.losses %></td>
+    <td><%= entry.draws %></td>
+    <td><%= link_to 'Show', entry %></td>
+    <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
+    <td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Entry', new_entry_path %>

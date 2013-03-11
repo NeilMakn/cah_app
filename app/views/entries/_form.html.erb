@@ -1,0 +1,41 @@
+<%= form_for(@entry) do |f| %>
+  <% if @entry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@entry.errors.count, "error") %> prohibited this entry from being saved:</h2>
+
+      <ul>
+      <% @entry.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :black_card %><br />
+    <%= f.text_field :black_card %>
+  </div>
+  <div class="field">
+    <%= f.label :white_card %><br />
+    <%= f.text_field :white_card %>
+  </div>
+  <div class="field">
+    <%= f.label :Playa %><br />
+    <%= f.text_field :Playa %>
+  </div>
+  <div class="field">
+    <%= f.label :wins %><br />
+    <%= f.number_field :wins %>
+  </div>
+  <div class="field">
+    <%= f.label :losses %><br />
+    <%= f.number_field :losses %>
+  </div>
+  <div class="field">
+    <%= f.label :draws %><br />
+    <%= f.number_field :draws %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,4 +1,16 @@
 CahApp::Application.routes.draw do
+  resources :entries
+
+
+  resources :white_cards
+
+
+  resources :black_cards
+
+
+  resources :playas
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Black card:</b>
+  <%= @entry.black_card %>
+</p>
+
+<p>
+  <b>White card:</b>
+  <%= @entry.white_card %>
+</p>
+
+<p>
+  <b>Playa:</b>
+  <%= @entry.Playa %>
+</p>
+
+<p>
+  <b>Wins:</b>
+  <%= @entry.wins %>
+</p>
+
+<p>
+  <b>Losses:</b>
+  <%= @entry.losses %>
+</p>
+
+<p>
+  <b>Draws:</b>
+  <%= @entry.draws %>
+</p>
+
+
+<%= link_to 'Edit', edit_entry_path(@entry) %> |
+<%= link_to 'Back', entries_path %>

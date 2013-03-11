@@ -1,0 +1,23 @@
+<h1>Listing playas</h1>
+
+<table>
+  <tr>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @playas.each do |playa| %>
+  <tr>
+    <td><%= playa.email %></td>
+    <td><%= link_to 'Show', playa %></td>
+    <td><%= link_to 'Edit', edit_playa_path(playa) %></td>
+    <td><%= link_to 'Destroy', playa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Playa', new_playa_path %>
